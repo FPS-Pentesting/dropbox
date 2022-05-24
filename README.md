@@ -33,7 +33,7 @@ Leave the rest as default and select “Add”
 
 ssh pentest@[Public IP]  
 sudo apt install git  
-git clone http://github.com/sirchsec/dropbox.git  
+git clone https://github.com/FPS-Pentesting/dropbox.git
 sudo ./azure_setup.sh  
 Create an openvpn cert and copy the file to flash drive.  
 
@@ -42,7 +42,7 @@ Create an openvpn cert and copy the file to flash drive.
 <h4>Then power on the dropbox and run the dropbox setup script:</h4>  
 
 copy the openvpn cert to the home folder  
-git clone http://github.com/sirchsec/dropbox.git  
+git clone https://github.com/FPS-Pentesting/dropbox.git
 cd dropbox  
 chmod +x *.sh  
 sudo ./NAB_MASTER_INSTALL.sh
