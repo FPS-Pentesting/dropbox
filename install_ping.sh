@@ -13,4 +13,4 @@ fi
 echo "###### INSTALLING PING CONNECTION SCRIPT ######"
 sudo chmod +x /opt/dropbox/ping.sh
 sudo chmod 666 /opt/dropbox/log/pingfaillog.txt
-sudo echo "0 * * * * root /opt/dropbox/ping.sh" >> /etc/crontab
+sudo echo "*/30 * * * * root /opt/dropbox/ping.sh" >> /etc/crontab
