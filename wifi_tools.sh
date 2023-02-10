@@ -48,7 +48,7 @@ pip2 install psycopg2-binary
 pip2 install scapy   # if fail sudo apt-get install python-scapy
 sudo python setup.py clean build install
 
-### Redundant Update befor Eaphammer install ###
+### Redundant Update before Eaphammer install ###
 sudo apt -y update && sudo apt -y upgrade
 
 ### Add eaphammer tools ####
