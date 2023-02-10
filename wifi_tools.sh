@@ -48,6 +48,9 @@ pip2 install psycopg2-binary
 pip2 install scapy   # if fail sudo apt-get install python-scapy
 sudo python setup.py clean build install
 
+### Redundant Update befor Eaphammer install ###
+sudo apt -y update && sudo apt -y upgrade
+
 ### Add eaphammer tools ####
 echo "INSTALLING EAP HAMMER!!!"
 #sudo apt install eaphammer -y  #This package is broken
@@ -55,7 +58,7 @@ cd /opt/
 sudo git clone https://github.com/s0lst1c3/eaphammer.git
 pip3 install pem
 cd /opt/eaphammer
-sudo ./kali-setup
+echo "y" | sudo ./kali-setup
 
 echo "Setting adapter to monitor mode!!!"
 sudo ip link set $interface down; sudo iw $interface set txpower fixed 3000; sudo iw dev $interface set type managed; sudo ip link set $interface up
