@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make install noninteractive (don't prompt the user to restart services)
+export DEBIAN_FRONTEND=noninteractive
+
 interface=wlan0
 echo "Interface is set to $interface"
 sleep 3
