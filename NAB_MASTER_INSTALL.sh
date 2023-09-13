@@ -9,9 +9,6 @@ else
         exit 1
 fi
 
-# Make install noninteractive (don't prompt user to restart services)
-export DEBIAN_FRONTEND=noninteractive
-
 echo "###### CLONING LATEST FILES ######"
 cd /opt/
 sudo git clone https://github.com/FPS-Pentesting/dropbox.git
@@ -51,4 +48,3 @@ sudo /opt/dropbox/install_ping.sh
 echo "###### REBOOTING IN 5 SECONDS ######"   #CONTAINS REBOOT PROMPT
 sleep 5
 sudo /sbin/shutdown -r now #soft reboot
-
