@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make install noninteractive (don't prompt the user to restart services)
+export DEBIAN_FRONTEND=noninteractive
+
 echo "Set new sudo password for kali user before running this script!"
 sleep 1
 
