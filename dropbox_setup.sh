@@ -2,11 +2,8 @@
 
 username=pentest
 
-#dropbox username
-#echo "Please enter dropbox username! (usually kali or pentest)"
-#read username
-#echo "USERNAME = $username"
-
+# Make install noninteractive (don't prompt the user to restart services)
+export DEBIAN_FRONTEND=noninteractive
 
 echo "Set new sudo password for $username user before running this script!"
 sleep 1
@@ -70,6 +67,9 @@ sudo systemctl start ntp.service
 echo "Cleaning Up..."
 sudo apt autoclean
 sudo apt -y autoremove
+
+echo "Configuring XRDP for better Performance"
+sudo /opt/dropbox/xrdp_performance_tweaks.sh
 
 echo "RECOMMEND REBOOT AFTER SCRIPT FINISHES……"
 sleep 3
