@@ -9,6 +9,9 @@ else
         exit 1
 fi
 
+# Make install noninteractive (don't prompt user to restart services)
+export DEBIAN_FRONTEND=noninteractive
+
 echo "###### CLONING LATEST FILES ######"
 cd /opt/
 sudo git clone https://github.com/FPS-Pentesting/dropbox.git
