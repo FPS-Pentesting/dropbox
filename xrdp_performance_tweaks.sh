@@ -58,6 +58,9 @@ sed -i 's/colorScheme=.*/colorScheme=WhiteOnBlack/' $QTERM_CONFIG
 
 ### Get rid of the "Authentication Required to Create Managed Color Device" message
 # source: https://www.kali.org/docs/general-use/xfce-with-rdp/
+mkdir -p /etc/polkit-1/localauthority/50-local.d/
+chown root:polkitd /etc/polkit-1/localauthority
+chmod 750 /etc/polkit-1/localauthority
 cat <<EOF | sudo tee /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
 [Allow Colord all Users]
 Identity=unix-user:*
