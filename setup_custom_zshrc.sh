@@ -4,6 +4,8 @@
 # View full history with timestamps using this command: fc -li 0
 
 # ==== Custom Zsh history config ====
+mkdir -p /etc/zsh/zshrc.d/
+
 cat <<'EOF' > /etc/zsh/zshrc.d/history-logging.zsh
 HISTFILE=~/.zsh_history
 # Store up to this number of commands in the memory buffer
