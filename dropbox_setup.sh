@@ -64,12 +64,18 @@ sudo timedatectl set-timezone America/New_York
 sudo systemctl enable ntp.service
 sudo systemctl start ntp.service
 
+echo "Configuring XRDP for better Performance"
+sudo /opt/dropbox/xrdp_performance_tweaks.sh
+
+echo "Configuring zsh for better history"
+sudo /opt/dropbox/setup_custom_zshrc.sh
+
+echo "Installing and configuring auditd"
+sudo /opt/dropbox/setup_auditd.sh
+
 echo "Cleaning Up..."
 sudo apt autoclean
 sudo apt -y autoremove
-
-echo "Configuring XRDP for better Performance"
-sudo /opt/dropbox/xrdp_performance_tweaks.sh
 
 echo "RECOMMEND REBOOT AFTER SCRIPT FINISHES……"
 sleep 3
