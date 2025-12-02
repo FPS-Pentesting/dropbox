@@ -28,4 +28,4 @@ sudo ip route add 192.168.0.0/16 dev eth0
 sudo ip route add 10.8.0.0/24 dev tun0
 
 echo ""
-echo "Errors that say 'RTNETLINK answers: File exists' are okay. That just means a route already existed"
+echo "Errors that say 'File exists/No such process' are okay. That just means a route change was redundant."
