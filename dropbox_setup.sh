@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Make our manual scripts executable
-chmod +x /opt/dropbox/*/*.sh
+sudo chmod +x /opt/dropbox/*/*.sh
 
 username=pentest
 
