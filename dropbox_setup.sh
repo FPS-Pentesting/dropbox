@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make our manual scripts executable
+chmod +x /opt/dropbox/*/*.sh
+
 username=pentest
 
 # Make install noninteractive (don't prompt the user to restart services)
