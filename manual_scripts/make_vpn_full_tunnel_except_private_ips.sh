@@ -8,6 +8,13 @@
 # If the client has hosts in that range that need testing,
 # we will need to come up with a special solution (this has never happened)
 
+# Reset to Clean/Default State
+sudo ip route del 0.0.0.0/1
+sudo ip route del 128.0.0.0/1
+sudo ip route del 10.0.0.0/8
+sudo ip route del 172.16.0.0/12
+sudo ip route del 192.168.0.0/16
+
 # By default, route all traffic through the VPN tunnel
 sudo ip route add 128.0.0.0/1 via 10.8.0.1
 sudo ip route add 0.0.0.0/1 via 10.8.0.1
