@@ -14,5 +14,7 @@ sudo ip route del 10.0.0.0/8
 sudo ip route del 172.16.0.0/12
 sudo ip route del 192.168.0.0/16
 
-echo ""
-echo "Errors that say 'RTNETLINK answers: No such process' are okay. That just means a route was already nonexistent."
+# This rule should always already exist (it is necessary for our connection to the NAB)
+sudo ip route add 10.8.0.0/24 dev tun0
+
+echo "Errors that say 'File exists/No such process' are okay. That just means a route change was redundant."
