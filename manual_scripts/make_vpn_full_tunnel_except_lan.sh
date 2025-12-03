@@ -5,6 +5,10 @@
 # If you need to hit other client subnets, you must add routing for them
 # This is the default setup for a new NAB
 
+# Variables
+LOCAL_GATEWAY=$(ip route | awk '/default/ {print $3}')
+VPN_GATEWAY=10.8.0.1
+
 # Reset to Clean/Default State
 sudo ip route del 0.0.0.0/1
 sudo ip route del 128.0.0.0/1
@@ -13,8 +17,8 @@ sudo ip route del 172.16.0.0/12
 sudo ip route del 192.168.0.0/16
 
 # Route traffic through VPN tunnel by default
-sudo ip route add 128.0.0.0/1 via 10.8.0.1
-sudo ip route add 0.0.0.0/1 via 10.8.0.1
+sudo ip route add 128.0.0.0/1 via $VPN_GATEWAY
+sudo ip route add 0.0.0.0/1 via $VPN_GATEWAY
 
 # This rule should always already exist (it is necessary for our connection to the NAB)
 sudo ip route add 10.8.0.0/24 dev tun0
